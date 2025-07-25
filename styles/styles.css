@@ -126,6 +126,37 @@ main {
   width: 100%;
 }
 
+/* plant portion-02 */
+
+.plant-lover {
+  margin-top: 210px;
+  gap: 60px;
+}
+
+.badge {
+  height: 286px;
+  width: 286px;
+  position: relative;
+  left: 347px;
+  bottom: 724px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.shop-info {
+  padding: 38px 0;
+}
+.shop-info ul li {
+  margin-top: 20px;
+}
+
 /* --------media query for small device------- */
 
 @media screen and (max-width: 576px) {
@@ -138,5 +169,11 @@ main {
   }
   .card-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .plant-lover {
+    flex-direction: column;
+  }
+  .plant-shop img {
+    width: 100%;
   }
 }
