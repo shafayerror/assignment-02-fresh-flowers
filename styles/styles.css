@@ -133,6 +133,10 @@ main {
   gap: 60px;
 }
 
+.plant-shop {
+  position: relative;
+}
+
 .badge {
   height: 286px;
   width: 286px;
@@ -141,7 +145,6 @@ main {
   bottom: 724px;
   animation: spin 4s linear infinite;
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -149,12 +152,6 @@ main {
   100% {
     transform: rotate(360deg);
   }
-}
-.shop-info {
-  padding: 38px 0;
-}
-.shop-info ul li {
-  margin-top: 20px;
 }
 
 /* --------media query for small device------- */
@@ -175,5 +172,8 @@ main {
   }
   .plant-shop img {
     width: 100%;
+  }
+  .badge {
+    display: none;
   }
 }
