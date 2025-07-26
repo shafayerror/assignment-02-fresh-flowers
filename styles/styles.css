@@ -18,6 +18,10 @@
   font-weight: 400;
   font-style: normal;
 }
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
 /* shared style */
 
 .display-flex {
@@ -278,26 +282,136 @@ main {
   font-weight: 500;
 }
 
-/* --------media query for small device------- */
+.footer {
+  display: flex;
+  padding: 50px 160px;
+  gap: 110px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
+.footer-list {
+  list-style: none;
+  margin-top: 32px;
+}
+.footer-list-a {
+  text-decoration: none;
+  color: rgba(107, 114, 128, 1);
+}
+.footer-social img {
+  padding: 24px;
+}
+
+/* === Media Query for 576px and below (mobile devices) === */
 @media screen and (max-width: 576px) {
-  .responsiveness {
-    display: none;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
+
+  /* Layout padding for mobile view */
+  body,
+  main,
+  header {
+    padding: 0 15px;
+  }
+
+  /* Navbar */
+  .Navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  /* Banner */
   .banner {
-    flex-flow: column-reverse;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .banner-img {
     width: 100%;
+  }
+  .banner-tittle {
+    font-size: 2rem;
+  }
+
+  /* Our Plant Section */
+  .our-plant {
+    margin-top: 80px;
   }
   .card-container {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
   }
+  .card {
+    width: 100% !important;
+  }
+
+  /* Hide Badge */
+  .badge {
+    display: none !important;
+  }
+
+  /* Plant Lover Section */
   .plant-lover {
     flex-direction: column;
+    gap: 30px;
   }
-  .plant-shop img {
+
+  /* Deal Section */
+  .deal-container {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+  .deal,
+  .deal-1,
+  .deal-card-2 {
+    width: 100% !important;
+    height: auto;
+    padding: 20px;
+    background-size: cover;
+  }
+  .deal-name-2 {
+    font-size: 1.5rem;
+  }
+  .shop-link-2 {
+    font-size: 1rem;
+  }
+
+  /* Join Section */
+  .joint-section {
+    padding: 40px 20px;
+    background-position: center;
+    background-size: cover;
+  }
+  .input-field {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .input-join {
     width: 100%;
   }
-  .badge {
-    display: none;
+  .btn-subscribe {
+    padding: 14px;
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-social img {
+    padding: 10px;
   }
 }
